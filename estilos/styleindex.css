@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+NKo+Unjoined:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+.grad {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../img/fondo.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+
+.header {
+  position: absolute;
+  top: calc(42% - 44px);
+  left: calc(65% - 387px);
+  z-index: 2;
+}
+
+.header div {
+  float: left;
+  color: #fff;
+  font-family: 'Exo', sans-serif;
+  font-size: 35px;
+  font-weight: 200;
+}
+
+.header div span {
+  color: #5379fa !important;
+}
+
+.login {
+  position: absolute;
+  top: calc(50% - 75px);
+  left: calc(50% - -70px);
+  height: 150px;
+  width: 350px;
+  padding: 10px;
+  z-index: 2;
+}
+
+.login input[type="text"],
+.login input[type="password"],
+.login input[type="submit"] {
+  width: 250px;
+  height: 30px;
+  background: #0000009e;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 6px;
+  color: #ffffff;
+  font-family: 'Exo', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 4px;
+}
+
+.login input[type="submit"] {
+  width: 260px;
+  height: 35px;
+  background: #000000c7;
+  border: 1px solid #fff;
+  cursor: pointer;
+  border-radius: 6px;
+  color: #ffffff;
+  font-family: 'Exo', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 6px;
+  margin-top: 10px;
+}
+
+.login input[type="submit"]:hover {
+  opacity: 0.8;
+}
+
+.login input[type="submit"]:active {
+  opacity: 0.6;
+}
+
+.login input[type="text"]:focus,
+.login input[type="password"]:focus,
+.login input[type="submit"]:focus {
+  outline: none;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+}
+
+::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+::-moz-input-placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+::placeholder{
+    color: #ffffffd5;
+}
+.cuadro{
+    background-color: #000000;
+    width: 40px;
+    height: auto;
+}
+
+.container {
+  width: 793px;
+  height: 400px;
+  background-color: #ffffffbf;
+  border: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  border-radius: 25px;
+}
+
+
+
+h1{
+  text-align: center;
+  padding: 10px;
+  height: 296px;
+  color: #233060;
+  font-family: 'Merriweather', serif;
+  z-index: 2;
+  letter-spacing: 3px;
+}
