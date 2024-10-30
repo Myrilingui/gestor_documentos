@@ -1,7 +1,7 @@
 <?php
 
 try{
-    $conexion = new PDO("sqlsrv:server=localhost\plasticos4;database=PlastiDocs","sa","Plasticos123");
+    $conexion = new PDO("sqlsrv:server=;database=","","");
 }catch(PDOException $exp){
     echo "error". $exp->getMessage();
 }
