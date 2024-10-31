@@ -1,4 +1,4 @@
-// //////////////////////////////////////////////////BARRA LATERAL//////////////////////////////////////////////////////
+////////////////////////////////////////////////////BARRA LATERAL//////////////////////////////////////////////////////
 var sidebar = document.getElementById("mySidebar");
 var openNavButton = document.getElementById("openNav");
 function toggleNav() {
@@ -40,7 +40,7 @@ window.addEventListener('resize', ajustarDiseño);
 
 ajustarDiseño();
 
-// ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
         const enlaces = document.querySelectorAll(".enlaces-lista li a");
         let currentIndex = -1;
@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-//// ////////////////////////////////////MODAL 2//////////////////////////////////////////////////
+////////////////////////////////////////MODAL 2//////////////////////////////////////////////////
 function openModal2() {
     const modalContainer2 = document.getElementById('modal_container2');
     modalContainer2.classList.add('show');
@@ -121,7 +121,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-//// ////////////////////////////////////MODAL 3//////////////////////////////////////////////////
+////////////////////////////////////////MODAL 3//////////////////////////////////////////////////
 function openModal3() {
     const modalContainer3 = document.getElementById('modal_container3');
     modalContainer3.classList.add('show');
@@ -152,7 +152,7 @@ document.addEventListener('DOMContentLoaded', function () {
         openModal3();
     });
 });
-//// ////////////////////////////////////MODAL 4//////////////////////////////////////////////////
+////////////////////////////////////////MODAL 4//////////////////////////////////////////////////
 function openModal4() {
     const modalContainer4 = document.getElementById('modal_container4');
     modalContainer4.classList.add('show');
@@ -184,7 +184,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-//// ////////////////////////////////////MODAL 5//////////////////////////////////////////////////
+////////////////////////////////////////MODAL 5//////////////////////////////////////////////////
 function openModal5() {
     const modalContainer5 = document.getElementById('modal_container5');
     modalContainer5.classList.add('show');
@@ -216,7 +216,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-//// ////////////////////////////////////MODAL 6 RECHAZO DE SOLICITUD//////////////////////////////////////////////////
+////////////////////////////////////////MODAL 6 RECHAZO DE SOLICITUD//////////////////////////////////////////////////
 function openModal6() {
     const modalContainer6 = document.getElementById('modal_container6');
     modalContainer6.classList.add('show');
@@ -248,7 +248,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-// ///////////////////////////////////////////// SUBIR ARCHIVOS /////////////////////////////////////////////
+/////////////////////////////////////////////// SUBIR ARCHIVOS /////////////////////////////////////////////
 const fileInput = document.getElementById('file-input');
 const filePreview = document.querySelector('.file-preview');
 const fileName = document.querySelector('.file-name');
@@ -270,10 +270,10 @@ fileInput.addEventListener('change', function() {
     }
 });
 
-uploadButton.addEventListener('click', function() {
+// // uploadButton.addEventListener('click', function() {
 
-    alert('Archivo subido con éxito.');
-});
+// //     alert('Archivo subido con éxito.');
+// // });
 //////////////////////////////////////// CUADROS DE NOMECLATURA /////////////////////////////////////////////// 
 function showMessage(message) {
     const messageElement = document.getElementById('message');
@@ -308,238 +308,233 @@ function hideMessage() {
  });
 
 ///////////////////////////////////////////Busqueda de USUARIOS///////////////////////////////////////////////////
-const searchBoxUsuarios = document.getElementById('search-text');
-const searchFormUsuarios = document.getElementById('search-form');
-const userListUsuarios = document.getElementById('userList');
-const deleteUserButtonUsuarios = document.getElementById('deleteUserButton');
-let selectedUserUsuarios = null;
+// const searchBoxUsuarios = document.getElementById('search-text');
+// const searchFormUsuarios = document.getElementById('search-form');
+// const userListUsuarios = document.getElementById('userList');
+// const deleteUserButtonUsuarios = document.getElementById('deleteUserButton');
+// let selectedUserUsuarios = null;
 
-deleteUserButtonUsuarios.style.width = '100%';
+// deleteUserButtonUsuarios.style.width = '100%';
 
 
-const noMatchesItemUsuarios = document.createElement('div');
-noMatchesItemUsuarios.textContent = 'No se encuentran coincidencias';
-noMatchesItemUsuarios.style.display = 'none'; 
-noMatchesItemUsuarios.classList.add('no-matches'); 
+// const noMatchesItemUsuarios = document.createElement('div');
+// noMatchesItemUsuarios.textContent = 'No se encuentran coincidencias';
+// noMatchesItemUsuarios.style.display = 'none'; 
+// noMatchesItemUsuarios.classList.add('no-matches'); 
 
-userListUsuarios.appendChild(noMatchesItemUsuarios);
+// userListUsuarios.appendChild(noMatchesItemUsuarios);
 
-function selectUserUsuarios(userItem) {
-    const userItemsUsuarios = userListUsuarios.querySelectorAll('.userItem');
-    userItemsUsuarios.forEach(item => {
-        item.classList.remove('selectedUserUsuarios');
-    });
-    userItem.classList.add('selectedUserUsuarios');
-}
+// function selectUserUsuarios(userItem) {
+//     const userItemsUsuarios = userListUsuarios.querySelectorAll('.userItem');
+//     userItemsUsuarios.forEach(item => {
+//         item.classList.remove('selectedUserUsuarios');
+//     });
+//     userItem.classList.add('selectedUserUsuarios');
+// }
 
-function showNoMatchesMessageUsuarios() {
-    noMatchesItemUsuarios.style.display = 'block';
-}
+// function showNoMatchesMessageUsuarios() {
+//     noMatchesItemUsuarios.style.display = 'block';
+// }
 
-function hideNoMatchesMessageUsuarios() {
-    noMatchesItemUsuarios.style.display = 'none';
-}
+// function hideNoMatchesMessageUsuarios() {
+//     noMatchesItemUsuarios.style.display = 'none';
+// }
 
-searchBoxUsuarios.addEventListener('input', () => {
-    const query = searchBoxUsuarios.value.toLowerCase();
+// searchBoxUsuarios.addEventListener('input', () => {
+//     const query = searchBoxUsuarios.value.toLowerCase();
 
-    const userItemsUsuarios = userListUsuarios.querySelectorAll('.userItem');
-    let hasMatchesUsuarios = false;
+//     const userItemsUsuarios = userListUsuarios.querySelectorAll('.userItem');
+//     let hasMatchesUsuarios = false;
 
-    userItemsUsuarios.forEach(userItem => {
-        const userNameUsuarios = userItem.textContent.toLowerCase();
-        if (userNameUsuarios.includes(query)) {
-            userItem.style.display = 'block';
-            hasMatchesUsuarios = true;
-        } else {
-            userItem.style.display = 'none';
-        }
-    });
+//     userItemsUsuarios.forEach(userItem => {
+//         const userNameUsuarios = userItem.textContent.toLowerCase();
+//         if (userNameUsuarios.includes(query)) {
+//             userItem.style.display = 'block';
+//             hasMatchesUsuarios = true;
+//         } else {
+//             userItem.style.display = 'none';
+//         }
+//     });
 
-    if (!hasMatchesUsuarios) {
-        showNoMatchesMessageUsuarios();
-    } else {
-        hideNoMatchesMessageUsuarios();
-    }
+//     if (!hasMatchesUsuarios) {
+//         showNoMatchesMessageUsuarios();
+//     } else {
+//         hideNoMatchesMessageUsuarios();
+//     }
 
-    selectedUserUsuarios = null;
-    deleteUserButtonUsuarios.style.display = 'none';
-});
+//     selectedUserUsuarios = null;
+//     deleteUserButtonUsuarios.style.display = 'none';
+// });
 
-userListUsuarios.addEventListener('click', (event) => {
-    const clickedUserUsuarios = event.target.closest('.userItem');
-    if (clickedUserUsuarios) {
+// userListUsuarios.addEventListener('click', (event) => {
+//     const clickedUserUsuarios = event.target.closest('.userItem');
+//     if (clickedUserUsuarios) {
 
-        selectUserUsuarios(clickedUserUsuarios);
+//         selectUserUsuarios(clickedUserUsuarios);
 
-        deleteUserButtonUsuarios.style.display = 'block';
+//         deleteUserButtonUsuarios.style.display = 'block';
 
-        selectedUserUsuarios = clickedUserUsuarios.getAttribute('data-id');
-    }
-});
+//         selectedUserUsuarios = clickedUserUsuarios.getAttribute('data-id');
+//     }
+// });
 
-deleteUserButtonUsuarios.addEventListener('click', () => {
-    if (selectedUserUsuarios) {
-        if (confirm(`¿Eliminar al usuario con ID "${selectedUserUsuarios}"?`)) {
-            const userItemsUsuarios = userListUsuarios.querySelectorAll('.userItem[data-id]');
+// deleteUserButtonUsuarios.addEventListener('click', () => {
+//     if (selectedUserUsuarios) {
+//         if (confirm(`¿Eliminar al usuario con ID "${selectedUserUsuarios}"?`)) {
+//             const userItemsUsuarios = userListUsuarios.querySelectorAll('.userItem[data-id]');
 
-            let selectedUserElementUsuarios = null;
+//             let selectedUserElementUsuarios = null;
 
-            userItemsUsuarios.forEach(userItem => {
-                const userId = userItem.getAttribute('data-id');
-                if (userId === selectedUserUsuarios) {
-                    selectedUserElementUsuarios = userItem;
-                }
-            });
+//             userItemsUsuarios.forEach(userItem => {
+//                 const userId = userItem.getAttribute('data-id');
+//                 if (userId === selectedUserUsuarios) {
+//                     selectedUserElementUsuarios = userItem;
+//                 }
+//             });
 
-            if (selectedUserElementUsuarios) {
-                selectedUserElementUsuarios.remove();
+//             if (selectedUserElementUsuarios) {
+//                 selectedUserElementUsuarios.remove();
 
-                fetch('../bd/eliminar_usuario.php', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({ id: selectedUserUsuarios }),
-                })
+//                 fetch('../bd/eliminar_usuario.php', {
+//                     method: 'POST',
+//                     headers: {
+//                         'Content-Type': 'application/json',
+//                     },
+//                     body: JSON.stringify({ id: selectedUserUsuarios }),
+//                 })
                
-                .then(data => {
-                    window.alert(data.message || 'Usuario eliminado exitosamente');
-                })
-                .catch(error => {
-                    window.alert(error.message || 'Error al eliminar el usuario');
-                });
-                selectedUserUsuarios = null;
-                deleteUserButtonUsuarios.style.display = 'none';
-            }
-        }
-    }
-});
+//                 .then(data => {
+//                     window.alert(data.message || 'Usuario eliminado exitosamente');
+//                 })
+//                 .catch(error => {
+//                     window.alert(error.message || 'Error al eliminar el usuario');
+//                 });
+//                 selectedUserUsuarios = null;
+//                 deleteUserButtonUsuarios.style.display = 'none';
+//             }
+//         }
+//     }
+// });
 
-searchFormUsuarios.addEventListener('submit', (event) => {
-    event.preventDefault();
-});
+// searchFormUsuarios.addEventListener('submit', (event) => {
+//     event.preventDefault();
+// });
 
 
  ///////////////////////////////////////////Busqueda de LIBRERIAS///////////////////////////////////////////////////
+// $(document).ready (function(){
+// const searchBoxLibrerias = document.getElementById('search-text1');
+// const searchFormLibrerias = document.getElementById('search-form1');
+// const libreriaList1 = document.getElementById('libreriaList1');
+// const deleteLibreriaButton1 = document.getElementById('deletelibreriaButton1');
+// let selectedLibreria1 = null;
 
-const searchBoxLibrerias = document.getElementById('search-text1');
-const searchFormLibrerias = document.getElementById('search-form1');
-const libreriaList1 = document.getElementById('libreriaList1');
-const deleteLibreriaButton1 = document.getElementById('deletelibreriaButton1');
-let selectedLibreria1 = null;
+// deleteLibreriaButton1.style.width = '100%';
 
-deleteLibreriaButton1.style.width = '100%';
+// const noMatchesItemLibrerias = document.createElement('div');
+// noMatchesItemLibrerias.textContent = 'No se encuentran coincidencias';
+// noMatchesItemLibrerias.style.display = 'none'; 
+// noMatchesItemLibrerias.classList.add('no-matches'); 
 
-const noMatchesItemLibrerias = document.createElement('div');
-noMatchesItemLibrerias.textContent = 'No se encuentran coincidencias';
-noMatchesItemLibrerias.style.display = 'none'; 
-noMatchesItemLibrerias.classList.add('no-matches'); 
+// libreriaList1.appendChild(noMatchesItemLibrerias);
+// // });
 
-libreriaList1.appendChild(noMatchesItemLibrerias);
 
-function selectLibreria1(libreriaItem) {
-    const libreriaItems = libreriaList1.querySelectorAll('.libreriaItem');
-    libreriaItems.forEach(item => {
-        item.classList.remove('selectedLibreria');
-    });
-    libreriaItem.classList.add('selectedLibreria');
-}
+// function selectLibreria1(libreriaItem) {
+//     const libreriaItems = libreriaList1.querySelectorAll('.libreriaItem');
+//     libreriaItems.forEach(item => {
+//         item.classList.remove('selectedLibreria');
+//     });
+//     libreriaItem.classList.add('selectedLibreria');
+// }
 
-function showNoMatchesMessageLibrerias() {
-    noMatchesItemLibrerias.style.display = 'block';
-}
+// function showNoMatchesMessageLibrerias() {
+//     noMatchesItemLibrerias.style.display = 'block';
+// }
 
-function hideNoMatchesMessageLibrerias() {
-    noMatchesItemLibrerias.style.display = 'none';
-}
-searchBoxLibrerias.addEventListener('input', () => {
-    const query = searchBoxLibrerias.value.toLowerCase();
-    const libreriaItems = libreriaList1.querySelectorAll('.libreriaItem');
-    let hasMatches = false;
+// function hideNoMatchesMessageLibrerias() {
+//     noMatchesItemLibrerias.style.display = 'none';
+// }
+// searchBoxLibrerias.addEventListener('input', () => {
+//     const query = searchBoxLibrerias.value.toLowerCase();
+//     const libreriaItems = libreriaList1.querySelectorAll('.libreriaItem');
+//     let hasMatches = false;
 
-    libreriaItems.forEach(libreriaItem => {
-        const libreriaName = libreriaItem.textContent.toLowerCase();
-        if (libreriaName.includes(query)) {
-            libreriaItem.style.display = 'block';
-            hasMatches = true;
-        } else {
-            libreriaItem.style.display = 'none';
-        }
-    });
+//     libreriaItems.forEach(libreriaItem => {
+//         const libreriaName = libreriaItem.textContent.toLowerCase();
+//         if (libreriaName.includes(query)) {
+//             libreriaItem.style.display = 'block';
+//             hasMatches = true;
+//         } else {
+//             libreriaItem.style.display = 'none';
+//         }
+//     });
 
-    if (!hasMatches) {
-        showNoMatchesMessageLibrerias();
-    } else {
-        hideNoMatchesMessageLibrerias();
-    }
+//     if (!hasMatches) {
+//         showNoMatchesMessageLibrerias();
+//     } else {
+//         hideNoMatchesMessageLibrerias();
+//     }
 
-    selectedLibreria1 = null;
-    deleteLibreriaButton1.style.display = 'none';
-});
+//     selectedLibreria1 = null;
+//     deleteLibreriaButton1.style.display = 'none';
+// });
 
-libreriaList1.addEventListener('click', (event) => {
-    const clickedLibreria = event.target.closest('.libreriaItem');
-    if (clickedLibreria) {
+// libreriaList1.addEventListener('click', (event) => {
+//     const clickedLibreria = event.target.closest('.libreriaItem');
+//     if (clickedLibreria) {
 
-        selectLibreria1(clickedLibreria);
+//         selectLibreria1(clickedLibreria);
 
-        deleteLibreriaButton1.style.display = 'block';
+//         deleteLibreriaButton1.style.display = 'block';
 
-        selectedLibreria1 = clickedLibreria.textContent.trim();
-    }
-});
+//         // selectedLibreria1 = clickedLibreria.textContent.trim();
+//         selectedLibreria1= clickedLibreria.getAttribute('data-id-l');
+        
+//     }
+// });
 
-deleteLibreriaButton1.addEventListener('click', () => {
-    if (selectedLibreria1) {
-        if (confirm(`¿Eliminar la librería "${selectedLibreria1}"?`)) {
-         
-            const selectedLibreriaElement = Array.from(libreriaItems).find(item => item.textContent.trim() === selectedLibreria1);
-            if (selectedLibreriaElement) {
-                selectedLibreriaElement.remove();
-            }
+// deleteLibreriaButton1.addEventListener('click', () => {
+//     if (selectedLibreria1) {
+//         if (confirm(`¿Eliminar la librería con ID "${selectedLibreria1}"?`)) {
+//             const libreriaItems = document.querySelectorAll('.libreriaItem[data-id-l]');
+//             let selectedLibreriaElement = null;
 
-            selectedLibreria1 = null;
-            deleteLibreriaButton1.style.display = 'none';
-        }
-    }
-});
+//             libreriaItems.forEach(libreriaItem => {
+//                 const libreriaId = libreriaItem.getAttribute('data-id-l');
+//                 if (libreriaId === selectedLibreria1) {
+//                     selectedLibreriaElement = libreriaItem;
+//                 }
+//             });
 
-searchFormLibrerias.addEventListener('submit', (event) => {
-    event.preventDefault();
-});
+//             if (selectedLibreriaElement) {
+//                 selectedLibreriaElement.remove();
 
-///////////////////////////////////BUSCADOR///////////////////////////////////////////
-var documentos = [
-    {
-        nombre: "Documento 1",
-        url: "http://localhost/proyecto/doc/Branding%20guideline%20Plastiexports%20noviembre%20(2).pdf"
-    },
-    {
-        nombre: "Documento 2",
-        url: "http://localhost/proyecto/doc/GUIADETESINA-TIC.pdf"
-    }
-];
+//                 fetch('../bd/eliminar_libreria.php', {
+//                     method: 'POST',
+//                     headers: {
+//                         'Content-Type': 'application/json',
+//                     },
+//                     body: JSON.stringify({ id_libreria: selectedLibreria1 }),
+//                 })
+//                 .then(data => {
+//                     window.alert(data.message || 'Librería eliminada exitosamente');
+//                 })
+//                 .catch(error => {
+//                     window.alert(error.message || 'Error al eliminar la librería');
+//                 });
 
-function buscarEnDocumentos(consulta) {
-    var resultados = document.getElementById('resultados');
-    resultados.innerHTML = ''; 
+//                 selectedLibreria1 = null;
+//                 deleteLibreriaButton1.style.display = 'none';
+//             }
+//         }
+//     }
+// });
 
-    documentos.forEach(function(documento) {
-        if (documento.nombre.toLowerCase().includes(consulta.toLowerCase())) {
-            var resultado = document.createElement('p');
-            resultado.innerText = documento.nombre;
-            resultado.addEventListener('click', function() {
-                window.location.href = documento.url;
-            });
-            resultados.appendChild(resultado);
-        }
-    });
-}
+// searchFormLibrerias.addEventListener('submit', (event) => {
+//     event.preventDefault();
+// });
 
-document.getElementById('Buscador').addEventListener('input', function() {
-    buscarEnDocumentos(this.value);
-});
 
 ///////////////////////////////////////////////////CREAR LIBRERIA//////////////////////////////////////////////
 const createLibraryButton = document.getElementById('createLibraryButton');
@@ -548,4 +543,17 @@ const createLibraryButton = document.getElementById('createLibraryButton');
         const confirmResult = confirm('¿Estás seguro de que deseas crear esta librería?');
         return confirmResult;
     });
+
+// //////////////////////////////////////////////NOMECLATURAS///////////////////////////////////////////////////
+function obtenerColorSegunFecha(fechaExpiracion) {
+    const fechaActual = new Date();
+
+    if (fechaActual > fechaExpiracion) {
+        return '#ff0000'; 
+    } else if (fechaActual < fechaExpiracion) {
+        return '#00ff00'; 
+    } else {
+        return '#ffff00'; 
+    }
+}
 
