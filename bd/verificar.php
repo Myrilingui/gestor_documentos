@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> edgar
 <?php
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $captcha = $_POST['g-recaptcha-response'];

@@ -1,9 +1,12 @@
+<<<<<<< HEAD
 <?php
 require 'vendor/autoload.php';
 require 'auth.php';
 require 'routes.php';
 
 $session = $auth0->getCredentials();
+=======
+>>>>>>> edgar
 
 if ($session === null) {
     header("Location: /login");

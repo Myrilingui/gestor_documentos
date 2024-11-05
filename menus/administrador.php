@@ -10,6 +10,8 @@
     <link rel="icon" href="../img/favicon-16x16.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <!-- Script de reCAPTCHA -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 </head>
 
@@ -73,34 +75,45 @@
 
                 <!-- //////////////////////////VENTANAS EMERGENTE////////////////////// -->
                 <div id="modal_container" class="modal-container">
-                    <div class="modal">
-                        <div id="file-upload-container">
-                            <h1 id="form-title">Carga de Archivos</h1>
+    <div class="modal">
+    <div id="file-upload-container">
+        <h1 id="form-title">Carga de Archivos</h1>
 
-                            <div class="file-upload">
+        <div class="file-upload">
+            <input type="file" id="file-input" class="file-input" accept=".pdf,.doc,.docx">
+        </div>
+        <div class="preview">
+            <div class="file-preview">
+                <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
+                <span class="file-name">Ningún archivo seleccionado</span>
+            </div>
+        </div>
+        <br>
+        <textarea class="comment-input1" rows="4" placeholder="Agrega una descripción"></textarea>
+        <br>
+        <label for="file-input" class="file-label">
+            <i class="fa fa-file-text fa-lg"></i> Seleccionar Archivo
+        </label>
 
-                                <input type="file" id="file-input" class="file-input" accept=".pdf,.doc,.docx">
-                            </div>
-                            <div class="preview">
-                                <div class="file-preview">
-                                    <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
-                                    <span class="file-name">Ningún archivo seleccionado</span>
-                                </div>
-                            </div>
-                            <br>
-                            <textarea class="comment-input1" rows="4" placeholder="Agrega una descripción"></textarea>
-                            <br>
-                            <label for="file-input" class="file-label">
-                                <i class="fa fa-file-text fa-lg"></i> Seleccionar Archivo
-                            </label>
-                            <button class="upload-button" disabled><i class="fa fa-upload fa-lg"></i>Subir
-                                Archivo</button>
-                        </div>
-                        <button id="close" class="close-button">
-                            <span>&times;</span>
-                        </button>
-                    </div>
-                </div>
+        <!-- Contenedor de reCAPTCHA -->
+        <div class="g-recaptcha" data-sitekey="6LevI3UqAAAAAIQqCkJiceU8AGv3fqNt29cBJGy4" data-callback="enableButton"></div>
+
+        <button class="upload-button" id="upload-button" disabled>
+            <i class="fa fa-upload fa-lg"></i> Subir Archivo
+        </button>
+    </div>
+
+    <script>
+        // Habilita el botón cuando el captcha se completa
+        function enableButton() {
+            document.getElementById("upload-button").disabled = false;
+        }
+    </script>
+
+    <script src="../js/script.js"></script>
+
+
+
                 <!----------------------------------------- SECTION 2 ------------------------------------------->
                 <?php
                 if ($_SERVER["REQUEST_METHOD"] == "POST" && !isset($_POST['registro_completado'])) {
