@@ -8,8 +8,6 @@
     <link rel="stylesheet" href="../estilos/style.css">
     <link rel="icon" href="../img/favicon-16x16.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-
-
 </head>
 
 <body>
@@ -22,7 +20,6 @@
         <a href="seccionU5.php">Normas y manuales</a>
         <div class="logout-message">
             <a href="../logout.php"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a>
-
         </div>
     </div>
 
@@ -31,30 +28,23 @@
             <img src="..\img\logo.png" alt="Logo de la empresa">
         </div>
         <span id="openNav" onclick="openNav()">&#9776;</span>
-        <!--  -->
         <div class="search-container">
             <i class="fa fa-search"></i>
             <input type="search" placeholder="Busca tu Archivo" id="Buscador" />
         </div>
         <div id="resultados" class="resultados"></div>
-        <!--  -->
         <nav class="header-nav">
             <ul>
-                <!-- Sección 1 -->
                 <li><a href="#" id="openModal">
-                        <img src="..\img\subir-archivo.png" alt="Imagen" id="imagenBoton">
-                    </a></li>
-
-                s
-                <!-- //////////////////////////VENTANAS EMERGENTE////////////////////// -->
+                    <img src="..\img\subir-archivo.png" alt="Imagen" id="imagenBoton">
+                </a></li>
                 <div id="modal_container" class="modal-container">
                     <div class="modal">
-                        <div id="file-upload-container">
+                        <!-- Formulario para enviar el archivo a enviar_correo.php -->
+                        <form action="../menus/enviar_correo.php" method="POST" enctype="multipart/form-data">
                             <h1 id="form-title">Carga de Archivos</h1>
-
                             <div class="file-upload">
-
-                                <input type="file" id="file-input" class="file-input" accept=".pdf,.doc,.docx">
+                                <input type="file" id="file-input" name="file" class="file-input" accept=".pdf,.doc,.docx">
                             </div>
                             <div class="preview">
                                 <div class="file-preview">
@@ -68,20 +58,17 @@
                             <label for="file-input" class="file-label">
                                 <i class="fa fa-file-text fa-lg"></i> Seleccionar Archivo
                             </label>
-                            <button class="upload-button" disabled><i class="fa fa-upload fa-lg"></i>Subir
-                                Archivo</button>
-                        </div>
+                            <button type="submit" class="upload-button"><i class="fa fa-upload fa-lg"></i> Subir Archivo</button>
+                        </form>
                         <button id="close" class="close-button">
-                        <span>&times;</span>
-                    </button>
+                            <span>&times;</span>
+                        </button>
                     </div>
-                    
                 </div>
             </ul>
         </nav>
     </header>
     <br>
-<body>
-<script src="../js/script.js"></script>
+    <script src="../js/script.js"></script>
 </body>
 </html>
